@@ -45,6 +45,14 @@ jobs:
         - PLAT=i686
         - TEST_DEPENDS="numpy==1.12.0"
     - os: linux
+      arch: arm64
+      env:
+        - MB_PYTHON_VERSION=3.6
+        - PLAT=aarch64
+        - MB_ML_VER=2014
+        - DOCKER_TEST_IMAGE=multibuild/xenial_{PLAT}
+        - TEST_DEPENDS="numpy==1.12.0"
+    - os: linux
       env:
         - MB_PYTHON_VERSION=3.7
         - TEST_DEPENDS="numpy==1.14.5"
@@ -52,6 +60,14 @@ jobs:
       env:
         - MB_PYTHON_VERSION=3.7
         - PLAT=i686
+        - TEST_DEPENDS="numpy==1.14.5"
+    - os: linux
+      arch: arm64
+      env:
+        - MB_PYTHON_VERSION=3.7
+        - PLAT=aarch64
+        - MB_ML_VER=2014
+        - DOCKER_TEST_IMAGE=multibuild/xenial_{PLAT}
         - TEST_DEPENDS="numpy==1.14.5"
     - os: linux
       env:
@@ -61,6 +77,14 @@ jobs:
       env:
         - MB_PYTHON_VERSION=3.8
         - PLAT=i686
+        - TEST_DEPENDS="numpy==1.17.3"
+    - os: linux
+      arch: arm64
+      env:
+        - MB_PYTHON_VERSION=3.8
+        - PLAT=aarch64
+        - MB_ML_VER=2014
+        - DOCKER_TEST_IMAGE=multibuild/xenial_{PLAT}
         - TEST_DEPENDS="numpy==1.17.3"
     - os: linux
       env:
@@ -70,6 +94,14 @@ jobs:
       env:
         - MB_PYTHON_VERSION=3.9
         - PLAT=i686
+        - TEST_DEPENDS="numpy==1.20"
+    - os: linux
+      arch: arm64
+      env:
+        - MB_PYTHON_VERSION=3.9
+        - PLAT=aarch64
+        - MB_ML_VER=2014
+        - DOCKER_TEST_IMAGE=multibuild/xenial_{PLAT}
         - TEST_DEPENDS="numpy==1.20"
 
 before_install:
